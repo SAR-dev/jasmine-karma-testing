@@ -24,6 +24,8 @@
       />
     </div>
 
+    <p>{{user | async | json}}</p>
+
     <!-- Form submit button -->
     <div class="d-grid">
       <button type="submit"  (click)="login()" class="btn btn-primary btn-lg">

@@ -24,6 +24,8 @@ export class LoginComponent implements OnInit {
     });
   }
 
+  user:any
+
   login(): void {
     if (!this.loginForm.invalid) {
       return;
@@ -32,8 +34,6 @@ export class LoginComponent implements OnInit {
     var email = this.loginForm.get('email')!.value;
     var password = this.loginForm.get('password')!.value;
 
-    this.authService.login(email, password).subscribe((res) => {
-      // go to home page
-    });
+    this.user = this.authService.login(email, password)
   }
 }
