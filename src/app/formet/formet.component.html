@@ -1,0 +1,59 @@
+<div class="container py-4">
+  <form class="w-500">
+    <!-- Name input -->
+    <div class="mb-3">
+      <label class="form-label" for="name">Name</label>
+      <input
+        class="form-control"
+        id="name"
+        name="name"
+        type="text"
+        placeholder="John Doe"
+        (change)="onChange($event)"
+      />
+      <div class="form-text text-danger" *ngIf="errors.name.length !== 0">
+        {{ errors.name }}
+      </div>
+    </div>
+
+    <!-- Email address input -->
+    <div class="mb-3">
+      <label class="form-label" for="email">Email Address</label>
+      <input
+        class="form-control"
+        id="email"
+        name="email"
+        type="email"
+        placeholder="john@email.com"
+        (change)="onChange($event)"
+      />
+      <div class="form-text text-danger" *ngIf="errors.email.length !== 0">
+        {{ errors.email }}
+      </div>
+    </div>
+
+    <!-- Message input -->
+    <div class="mb-3">
+      <label class="form-label" for="message">Message</label>
+      <textarea
+        class="form-control"
+        id="message"
+        name="message"
+        type="text"
+        placeholder="Start writing here...."
+        (change)="onChange($event)"
+        style="height: 10rem"
+      ></textarea>
+      <div class="form-text text-danger" *ngIf="errors.message.length !== 0">
+        {{ errors.message }}
+      </div>
+    </div>
+
+    <!-- Form submit button -->
+    <div class="d-grid">
+      <button type="button" class="btn btn-primary btn-lg" (click)="onSubmit()">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
