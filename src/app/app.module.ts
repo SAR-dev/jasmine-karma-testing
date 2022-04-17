@@ -9,7 +9,7 @@ import { BlockquoteComponent } from './blockquote/blockquote.component';
 import { MessageComponent } from './message/message.component';
 import { FormetComponent } from './formet/formet.component';
 import { ReactiveComponent } from './reactive/reactive.component';
-import { LoginComponent } from './login/login.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { LoginComponent } from './login/login.component';
     MessageComponent,
     FormetComponent,
     ReactiveComponent,
-    LoginComponent
+    GalleryComponent
   ],
   imports: [
     HttpClientModule,
