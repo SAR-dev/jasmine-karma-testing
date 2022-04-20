@@ -85,19 +85,19 @@ describe('GalleryComponent', () => {
       imports: [HttpClientTestingModule],
       declarations: [GalleryComponent],
     }).compileComponents();
-  });
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(GalleryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  // Sakusei suru hitsuyō ga arimasu
+  it('作成する必要があります', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should call getPhotos and get response as empty array', fakeAsync(() => {
+  // GetPhotos o yobidashite, http response o jushin suru hitsuyō ga arimasu.
+  it('getPhotosを呼び出して、http responseを受信する必要があります', fakeAsync(() => {
     const service = fixture.debugElement.injector.get(ImagefetchService);
     spyOn(service, 'getPhotos').and.callFake(() => {
       return Rx.of(sample).pipe(Rx.delay(2000));

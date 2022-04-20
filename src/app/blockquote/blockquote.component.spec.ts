@@ -8,38 +8,46 @@ describe('BlockquoteComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BlockquoteComponent ]
-    })
-    .compileComponents();
-  });
+      declarations: [BlockquoteComponent],
+    }).compileComponents();
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(BlockquoteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  // Sakusei suru hitsuyō ga arimasu
+  it('作成する必要があります', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should contain a `blockquote` element', () => {
-    const blockquote = fixture.debugElement.query(By.css('blockquote')).nativeElement;
-    expect(blockquote).toBeTruthy()
+  // `Blockquote' yōso o fukumeru hitsuyō ga arimasu
+  it('「blockquote」要素を含める必要があります', () => {
+    const blockquote = fixture.debugElement.query(
+      By.css('blockquote')
+    ).nativeElement;
+    expect(blockquote).toBeTruthy();
   });
 
-  it('should contain a `blockquote` element', () => {
-    const cite = fixture.debugElement.query(By.css('blockquote cite')).nativeElement;
-    expect(cite).toBeTruthy()
+  // `Cite' yōso o fukumeru hitsuyō ga arimasu
+  it('「Cite」要素を含める必要があります', () => {
+    const cite = fixture.debugElement.query(
+      By.css('blockquote cite')
+    ).nativeElement;
+    expect(cite).toBeTruthy();
   });
 
-  it('quote should have a margin by 4 units', () => {
+  // `Quote' no shimo mājin wa 4 tan'idearu hitsuyō ga arimasu
+  it('「quote」の下マージンは4単位である必要があります', () => {
     const el = fixture.debugElement.query(By.css('blockquote p')).nativeElement;
-    expect(el).toHaveClass("mb-4")
+    expect(el).toHaveClass('mb-4');
   });
 
-  it('footer should contain a `blockquote-footer` class', () => {
-    const el = fixture.debugElement.query(By.css('blockquote footer')).nativeElement;
-    expect(el).toHaveClass("blockquote-footer")
+  // `Futtā' ni wa `blockquote - futtā' kurasu ga fukuma rete iru hitsuyō ga arimasu
+  it('「footer」には「blockquote-footer」クラスが含まれている必要があります', () => {
+    const el = fixture.debugElement.query(
+      By.css('blockquote footer')
+    ).nativeElement;
+    expect(el).toHaveClass('blockquote-footer');
   });
 });
