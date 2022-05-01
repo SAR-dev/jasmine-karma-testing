@@ -18,7 +18,7 @@ export class GalleryComponent implements OnInit {
 
   getImages(){
     this.isLoading = true;
-    this.service.getMemes().subscribe((response) => {
+    this.service.getPhotos().subscribe((response) => {
       this.isLoading = false;
       this.result = response;
     })

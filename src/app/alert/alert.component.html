@@ -1,4 +1,7 @@
 <div class="w-500">
+  <button type="button" class="btn btn-info mb-4" (click)="toogleVisibility()">
+    Toogle Visibility
+  </button>
   <div class="alert alert-success" role="alert" [hidden]="!visible">
     <h4 class="alert-heading">素晴らしい！</h4>
     <p>
@@ -10,8 +13,4 @@
       必要なときはいつでも、マージンユーティリティを使用して物事をきれいに保つようにしてください。
     </p>
   </div>
-
-  <button type="button" class="btn btn-info" (click)="toogleVisibility()">
-    Toogle Visibility
-</button>
 </div>

@@ -10,26 +10,27 @@ describe('MessageComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [MessageComponent],
     }).compileComponents();
-  });
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(MessageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  // Sakusei suru hitsuyō ga arimasu
+  it('作成する必要があります', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should contain primary color background', () => {
+  // Rgb (207, 226, 255) no karākōdo no haikei ga fukuma rete iru hitsuyō ga arimasu
+  it('rgb(207、226、255)のカラーコードの背景が含まれている必要があります', () => {
     const alert = fixture.debugElement.query(By.css('.alert')).nativeElement;
     expect(getComputedStyle(alert).backgroundColor).toEqual(
       'rgb(207, 226, 255)'
     );
   });
 
-  it('should contain primary color text', () => {
+  // Rgb (8 , 66, 152) no karākōdo no tekisuto o fukumeru hitsuyō ga arimasu
+  it('rgb(8、66、152)のカラーコードのテキストを含める必要があります', () => {
     const alert = fixture.debugElement.query(By.css('.alert')).nativeElement;
     expect(getComputedStyle(alert).color).toEqual('rgb(8, 66, 152)');
   });
