@@ -31,13 +31,9 @@ export class FormetComponent implements OnInit {
   onSubmit() {
     this.name.length === 0 ? (this.errors.name = 'Name is required') : '';
     this.email.length === 0 ? (this.errors.email = 'Email is required') : '';
-    this.message.length === 0
-      ? (this.errors.message = 'Message is required')
-      : '';
+    this.message.length === 0 ? (this.errors.message = 'Message is required') : '';
     const pattern = /^\S+@\S+\.\S+$/;
-    this.email.length !== 0 && !pattern.test(this.email)
-      ? (this.errors.email = 'Email pattern is invalid')
-      : '';
+    this.email.length !== 0 && !pattern.test(this.email) ? (this.errors.email = 'Email pattern is invalid') : '';
     console.log('Submitted');
   }
 }

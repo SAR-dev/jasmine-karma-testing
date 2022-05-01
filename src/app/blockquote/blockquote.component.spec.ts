@@ -31,9 +31,7 @@ describe('BlockquoteComponent', () => {
 
   // `Cite' yōso o fukumeru hitsuyō ga arimasu
   it('「Cite」要素を含める必要があります', () => {
-    const cite = fixture.debugElement.query(
-      By.css('blockquote cite')
-    ).nativeElement;
+    const cite = fixture.debugElement.query(By.css('blockquote cite')).nativeElement;
     expect(cite).toBeTruthy();
   });
 
@@ -45,9 +43,7 @@ describe('BlockquoteComponent', () => {
 
   // `Futtā' ni wa `blockquote - futtā' kurasu ga fukuma rete iru hitsuyō ga arimasu
   it('「footer」には「blockquote-footer」クラスが含まれている必要があります', () => {
-    const el = fixture.debugElement.query(
-      By.css('blockquote footer')
-    ).nativeElement;
+    const el = fixture.debugElement.query(By.css('blockquote footer')).nativeElement;
     expect(el).toHaveClass('blockquote-footer');
   });
 });
