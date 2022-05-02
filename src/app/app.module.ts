@@ -10,6 +10,7 @@ import { MessageComponent } from './message/message.component';
 import { FormetComponent } from './formet/formet.component';
 import { ReactiveComponent } from './reactive/reactive.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { NoteComponent } from './note/note.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { GalleryComponent } from './gallery/gallery.component';
     MessageComponent,
     FormetComponent,
     ReactiveComponent,
-    GalleryComponent
+    GalleryComponent,
+    NoteComponent
   ],
   imports: [
     HttpClientModule,

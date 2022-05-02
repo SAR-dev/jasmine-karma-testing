@@ -9,7 +9,7 @@
         name="name"
         type="text"
         placeholder="John Doe"
-        [(ngModel)]="name"
+        (change)="onChange($event)"
       />
       <div class="form-text text-danger" *ngIf="errors.name.length !== 0">
         {{ errors.name }}
@@ -25,7 +25,7 @@
         name="email"
         type="email"
         placeholder="john@email.com"
-        [(ngModel)]="email"
+        (change)="onChange($event)"
       />
       <div class="form-text text-danger" *ngIf="errors.email.length !== 0">
         {{ errors.email }}
@@ -41,7 +41,7 @@
         name="message"
         type="text"
         placeholder="Start writing here...."
-        [(ngModel)]="message"
+        (change)="onChange($event)"
         style="height: 10rem"
       ></textarea>
       <div class="form-text text-danger" *ngIf="errors.message.length !== 0">

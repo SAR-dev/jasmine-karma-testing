@@ -5,6 +5,7 @@ import { BlockquoteComponent } from './blockquote/blockquote.component';
 import { FormetComponent } from './formet/formet.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { MessageComponent } from './message/message.component';
+import { NoteComponent } from './note/note.component';
 import { ReactiveComponent } from './reactive/reactive.component';
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'formet', component: FormetComponent },
   { path: 'reactive', component: ReactiveComponent },
   { path: 'gallery', component: GalleryComponent },
+  { path: 'note', component: NoteComponent },
 ];
 
 @NgModule({

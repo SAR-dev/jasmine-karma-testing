@@ -39,7 +39,7 @@
 
     <!-- Form submit button -->
     <div class="d-grid">
-      <button type="submit"  (click)="sendMessage()" class="btn btn-primary btn-lg">
+      <button type="submit"  (click)="sendMessage()" class="btn btn-primary btn-lg" [disabled]="!contactForm.valid">
         Submit
       </button>
     </div>
