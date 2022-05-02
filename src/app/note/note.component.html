@@ -10,7 +10,7 @@
   ></textarea>
   <button class="btn btn-primary mt-1" style="width: 100%;" (click)="saveText()">Save</button>
 </div>
-<div class="mx-auto mt-3" style="width: 500px">
+<div class="mx-auto mt-3" style="width: 500px" id="notes">
   <p class="bg-secondary p-3 text-white rounded mb-2" *ngFor="let note of notes;" >
     {{note}}
   </p>

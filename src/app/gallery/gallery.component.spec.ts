@@ -109,4 +109,5 @@ describe('GalleryComponent', () => {
     expect(component.isLoading).toEqual(false);
     expect(component.result).toEqual(sample);
   }));
+
 });

@@ -22,6 +22,10 @@ describe('AlertComponent', () => {
   });
 
   // Togurubotan ga fukuma rete iru hitsuyō ga arimasu.
+  // it('トグルボタンが含まれている必要があります', () => {
+  //   const btn = fixture.debugElement.query(By.css('button')).nativeElement;
+  //   expect(btn.innerHTML).toContain('Toogle Visibility');
+  // });
   it('トグルボタンが含まれている必要があります', () => {
     const btn = fixture.debugElement.query(By.css('button')).nativeElement;
     expect(btn.innerHTML).toContain('Toogle Visibility');
